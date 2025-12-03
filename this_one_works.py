@@ -53,6 +53,6 @@ def get_ordered_skeleton_coords(image_path, dark_thresh=128, output_file="coordi
     return np.array(ordered_coords_flipped)
 
 if __name__ == "__main__":
-    image_path = r"C:\Users\wesle\Downloads\test image5.png"
+    image_path = r"C:\Users\wesle\Downloads\test image6.png"
     coords = get_ordered_skeleton_coords(image_path)
     print(coords[:10])
