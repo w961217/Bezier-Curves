@@ -12,15 +12,19 @@ def extract_black_line_edges(image_path, dark_thresh=60):
 
     # Convert to grayscale
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    edges = cv2.Laplacian(gray, cv2.CV_64F)
+    edges = cv2.convertScaleAbs(edges)
+    cv2.imwrite("edges.png", edges)
+    
 
-    # Create mask for dark pixels only (lower value = darker)
-    mask = cv2.inRange(gray, 0, dark_thresh)
+    # # Create mask for dark pixels only (lower value = darker)
+    # mask = cv2.inRange(gray, 0, dark_thresh)
 
-    # Optional: clean small noise
-    mask = cv2.medianBlur(mask, 3)
+    # # Optional: clean small noise
+    # mask = cv2.medianBlur(mask, 3)
 
-    # Find edges of the dark regions
-    edges = cv2.Canny(mask, 50, 150)
+    # # Find edges of the dark regions
+    # edges = cv2.Canny(mask, 50, 150)
 
     # Find contours around dark regions
     contours, _ = cv2.findContours(edges, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
