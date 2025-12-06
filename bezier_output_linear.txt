@@ -1,0 +1,182 @@
+=== START_CURVE ===
+Curve #1 | degree=1 | dim=2
+Control points: [(160, 0), (96, 52)]
+
+Bernstein form:
+C(1,0) * t^0 * (1-t)^1 * (160, 0) + C(1,1) * t^1 * (1-t)^0 * (96, 52)
+
+Expanded polynomial form (per coordinate):
+  coord_0(t) = -64*t + 160
+  coord_1(t) = 52*t
+
+Vector function: B(t) = (-64*t + 160, 52*t)
+=== END_CURVE ===
+
+=== START_CURVE ===
+Curve #2 | degree=1 | dim=2
+Control points: [(96, 52), (52, 169)]
+
+Bernstein form:
+C(1,0) * t^0 * (1-t)^1 * (96, 52) + C(1,1) * t^1 * (1-t)^0 * (52, 169)
+
+Expanded polynomial form (per coordinate):
+  coord_0(t) = -44*t + 96
+  coord_1(t) = 117*t + 52
+
+Vector function: B(t) = (-44*t + 96, 117*t + 52)
+=== END_CURVE ===
+
+=== START_CURVE ===
+Curve #3 | degree=1 | dim=2
+Control points: [(52, 169), (95, 86)]
+
+Bernstein form:
+C(1,0) * t^0 * (1-t)^1 * (52, 169) + C(1,1) * t^1 * (1-t)^0 * (95, 86)
+
+Expanded polynomial form (per coordinate):
+  coord_0(t) = 43*t + 52
+  coord_1(t) = -83*t + 169
+
+Vector function: B(t) = (43*t + 52, -83*t + 169)
+=== END_CURVE ===
+
+=== START_CURVE ===
+Curve #4 | degree=1 | dim=2
+Control points: [(95, 86), (123, 259)]
+
+Bernstein form:
+C(1,0) * t^0 * (1-t)^1 * (95, 86) + C(1,1) * t^1 * (1-t)^0 * (123, 259)
+
+Expanded polynomial form (per coordinate):
+  coord_0(t) = 28*t + 95
+  coord_1(t) = 173*t + 86
+
+Vector function: B(t) = (28*t + 95, 173*t + 86)
+=== END_CURVE ===
+
+=== START_CURVE ===
+Curve #5 | degree=1 | dim=2
+Control points: [(123, 259), (178, 80)]
+
+Bernstein form:
+C(1,0) * t^0 * (1-t)^1 * (123, 259) + C(1,1) * t^1 * (1-t)^0 * (178, 80)
+
+Expanded polynomial form (per coordinate):
+  coord_0(t) = 55*t + 123
+  coord_1(t) = -179*t + 259
+
+Vector function: B(t) = (55*t + 123, -179*t + 259)
+=== END_CURVE ===
+
+=== START_CURVE ===
+Curve #6 | degree=1 | dim=2
+Control points: [(178, 80), (216, 290)]
+
+Bernstein form:
+C(1,0) * t^0 * (1-t)^1 * (178, 80) + C(1,1) * t^1 * (1-t)^0 * (216, 290)
+
+Expanded polynomial form (per coordinate):
+  coord_0(t) = 38*t + 178
+  coord_1(t) = 210*t + 80
+
+Vector function: B(t) = (38*t + 178, 210*t + 80)
+=== END_CURVE ===
+
+=== START_CURVE ===
+Curve #7 | degree=1 | dim=2
+Control points: [(216, 290), (170, 240)]
+
+Bernstein form:
+C(1,0) * t^0 * (1-t)^1 * (216, 290) + C(1,1) * t^1 * (1-t)^0 * (170, 240)
+
+Expanded polynomial form (per coordinate):
+  coord_0(t) = -46*t + 216
+  coord_1(t) = -50*t + 290
+
+Vector function: B(t) = (-46*t + 216, -50*t + 290)
+=== END_CURVE ===
+
+=== START_CURVE ===
+Curve #8 | degree=1 | dim=2
+Control points: [(170, 240), (254, 259)]
+
+Bernstein form:
+C(1,0) * t^0 * (1-t)^1 * (170, 240) + C(1,1) * t^1 * (1-t)^0 * (254, 259)
+
+Expanded polynomial form (per coordinate):
+  coord_0(t) = 84*t + 170
+  coord_1(t) = 19*t + 240
+
+Vector function: B(t) = (84*t + 170, 19*t + 240)
+=== END_CURVE ===
+
+=== START_CURVE ===
+Curve #9 | degree=1 | dim=2
+Control points: [(254, 259), (242, 187)]
+
+Bernstein form:
+C(1,0) * t^0 * (1-t)^1 * (254, 259) + C(1,1) * t^1 * (1-t)^0 * (242, 187)
+
+Expanded polynomial form (per coordinate):
+  coord_0(t) = -12*t + 254
+  coord_1(t) = -72*t + 259
+
+Vector function: B(t) = (-12*t + 254, -72*t + 259)
+=== END_CURVE ===
+
+=== START_CURVE ===
+Curve #10 | degree=1 | dim=2
+Control points: [(242, 187), (265, 226)]
+
+Bernstein form:
+C(1,0) * t^0 * (1-t)^1 * (242, 187) + C(1,1) * t^1 * (1-t)^0 * (265, 226)
+
+Expanded polynomial form (per coordinate):
+  coord_0(t) = 23*t + 242
+  coord_1(t) = 39*t + 187
+
+Vector function: B(t) = (23*t + 242, 39*t + 187)
+=== END_CURVE ===
+
+=== START_CURVE ===
+Curve #11 | degree=1 | dim=2
+Control points: [(265, 226), (310, 145)]
+
+Bernstein form:
+C(1,0) * t^0 * (1-t)^1 * (265, 226) + C(1,1) * t^1 * (1-t)^0 * (310, 145)
+
+Expanded polynomial form (per coordinate):
+  coord_0(t) = 45*t + 265
+  coord_1(t) = -81*t + 226
+
+Vector function: B(t) = (45*t + 265, -81*t + 226)
+=== END_CURVE ===
+
+=== START_CURVE ===
+Curve #12 | degree=1 | dim=2
+Control points: [(310, 145), (408, 728)]
+
+Bernstein form:
+C(1,0) * t^0 * (1-t)^1 * (310, 145) + C(1,1) * t^1 * (1-t)^0 * (408, 728)
+
+Expanded polynomial form (per coordinate):
+  coord_0(t) = 98*t + 310
+  coord_1(t) = 583*t + 145
+
+Vector function: B(t) = (98*t + 310, 583*t + 145)
+=== END_CURVE ===
+
+=== START_CURVE ===
+Curve #13 | degree=1 | dim=2
+Control points: [(822, 728), (1290, 320)]
+
+Bernstein form:
+C(1,0) * t^0 * (1-t)^1 * (822, 728) + C(1,1) * t^1 * (1-t)^0 * (1290, 320)
+
+Expanded polynomial form (per coordinate):
+  coord_0(t) = 468*t + 822
+  coord_1(t) = -408*t + 728
+
+Vector function: B(t) = (468*t + 822, -408*t + 728)
+=== END_CURVE ===
+
