@@ -35,7 +35,7 @@ def _bernstein_basis_poly(n: int, i: int) -> Polynomial:
     # Polynomial for t
     t_poly = Polynomial([0.0, 1.0])
     one_minus_t = Polynomial([1.0, -1.0])  # 1 - t
-    basis = (t_poly ** i) * (one_minus_t ** (n - i)) * comb(n, i)
+    basis = (t_poly**i) * (one_minus_t ** (n - i)) * comb(n, i)
     return basis
 
 
@@ -61,7 +61,9 @@ def _polynomial_to_string(poly: Polynomial, var: str = "t") -> str:
     return " + ".join(reversed(terms))
 
 
-def _vector_polynomial_to_string(polys: List[Polynomial], var: str = "t") -> Tuple[str, List[str]]:
+def _vector_polynomial_to_string(
+    polys: List[Polynomial], var: str = "t"
+) -> Tuple[str, List[str]]:
     """
     Given list of Polynomial objects (one per coordinate), return:
       - component strings [x(t), y(t), ...]
@@ -115,8 +117,10 @@ def _format_control_points(ctrl_pts: np.ndarray) -> str:
     return "[" + ", ".join(pts_strs) + "]"
 
 
-def export_functions_by_degree(list_of_ctrl_sets: Sequence[Sequence[Sequence[float]]],
-                               prefix: str = "bezier_functions"):
+def export_functions_by_degree(
+    list_of_ctrl_sets: Sequence[Sequence[Sequence[float]]],
+    prefix: str = "bezier_functions",
+):
     """
     Process many control-point sets and write functions to three files by degree:
       prefix_linear.txt
@@ -138,7 +142,9 @@ def export_functions_by_degree(list_of_ctrl_sets: Sequence[Sequence[Sequence[flo
         pts = _stack_ctrl(ctrl)
         n = pts.shape[0]
         if n not in (2, 3, 4):
-            raise ValueError(f"Control set #{idx} has {n} points — only 2, 3 or 4 allowed.")
+            raise ValueError(
+                f"Control set #{idx} has {n} points — only 2, 3 or 4 allowed."
+            )
 
         dim = pts.shape[1]
         ctrl_header = f"Curve #{idx} | degree={n-1} | dim={dim}\nControl points: {_format_control_points(pts)}\n"
@@ -187,37 +193,47 @@ def export_functions_by_degree(list_of_ctrl_sets: Sequence[Sequence[Sequence[flo
 # ------------------------------
 if __name__ == "__main__":
     example_sets = [
-        [(160, 0), (96, 52)],                          # linear (degree 1)
-        [(96, 52), (52, 169)], 
-        [(52, 169), (95, 86)], 
-        [(95, 86), (123, 259)], 
-        [(123, 259), (178, 80)], 
-        [(178, 80), (216, 290)], 
-        [(216, 290), (170, 240)], 
-        [(170, 240), (254, 259)], 
-        [(254, 259), (242, 187)], 
-        [(242, 187), (265, 226)], 
-        [(265, 226), (310, 145)], 
-        [(310, 145), (408, 728)], 
-        [(822, 728), (1290, 320)], 
+        [(160, 0), (96, 52)],
+        [(96, 52), (52, 169)],
+        [(52, 169), (95, 86)],
+        [(95, 86), (123, 259)],
+        [(123, 259), (178, 80)],
+        [(178, 80), (216, 290)],
+        [(216, 290), (170, 240)],
+        [(170, 240), (254, 259)],
+        [(254, 259), (242, 187)],
+        [(242, 187), (265, 226)],
+        [(265, 226), (310, 145)],
+        [(310, 145), (408, 728)],
+        [(822, 728), (1290, 320)],
         
-        [(160, 0), (112,15), (96, 52)], 
-        [(96, 52), (18,115), (52, 169)], 
-        [(52, 169), (60, 107), (95, 86)], 
-        [(95, 86), (45, 210), (123, 259)], 
-        [(123, 259), (35,123), (178, 80)], 
-        [(178, 80), (76, 207), (216, 290)], 
-        [(216, 290), (183,266), (170, 240)], 
-        [(170, 240), (226,293), (254, 259)], 
-        [(254, 259), (224, 234), (242, 187)], 
-        [(242, 187), (234, 219), (265, 226)], 
-        [(265, 226), (247,145), (310, 145)], 
-        [(310, 145), (240,540), (408, 728)], 
-        [(822, 728), (1075,266), (1290, 320)] 
-        # [(0, 0), (3, 6), (6, 0)],                  # quadratic (degree 2)
-        # [(0, 0), (2, 4), (4, -2), (6, 0)],         # cubic (degree 3)
-        # [(1, 1), (4, 7)],                          # another linear
-        # [(0, 0), (1, 5), (3, 2)],                  # another quadratic
+        [(160, 0), (112, 15), (96, 52)],
+        [(96, 52), (18, 115), (52, 169)],
+        [(52, 169), (60, 107), (95, 86)],
+        [(95, 86), (45, 210), (123, 259)],
+        [(123, 259), (35, 123), (178, 80)],
+        [(178, 80), (76, 207), (216, 290)],
+        [(216, 290), (183, 266), (170, 240)],
+        [(170, 240), (226, 293), (254, 259)],
+        [(254, 259), (224, 234), (242, 187)],
+        [(242, 187), (234, 219), (265, 226)],
+        [(265, 226), (247, 145), (310, 145)],
+        [(310, 145), (240, 540), (408, 728)],
+        [(822, 728), (1075, 266), (1290, 320)],
+        
+        [(160, 0), (137, 5), (98, 32), (96, 52)],
+        [(96, 52), (42, 90), (28, 154), (52, 169)],
+        [(52, 169), (51, 138), (78, 96), (95, 86)],
+        [(95, 86), (53, 143), (87, 262), (123, 259)],
+        [(123, 259), (80, 124), (58, 107), (178, 80)],
+        [(178, 80), (112, 111), (123, 267), (216, 290)],
+        [(216, 290), (216, 190), (202, 283), (170, 240)],
+        [(170, 240), (207, 279), (244,277), (254, 259)],
+        [(254, 259), (232,243), (232,194), (242, 187)],
+        [(242, 187), (233,207), (253,227), (265, 226)],
+        [(265, 226), (248,195), (261,144), (310, 145)],
+        [(310, 145), (397,330), (225,547), (408, 728)],
+        [(822, 728), (939,657), (1006,273), (1290,20)],
     ]
 
     export_functions_by_degree(example_sets, prefix="bezier_output")

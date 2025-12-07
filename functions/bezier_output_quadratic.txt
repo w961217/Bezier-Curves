@@ -3,7 +3,7 @@ Curve #14 | degree=2 | dim=2
 Control points: [(160, 0), (112, 15), (96, 52)]
 
 Bernstein form:
-C(2,0) *  t^0 * (1-t)^2 * (160, 0) + C(2,1) * t^1 * (1-t)^1 * (112, 15) + C(2,2) * t^2 * (1-t)^0 * (96, 52)
+C(2,0) * t^0 * (1-t)^2 * (160, 0) + C(2,1) * t^1 * (1-t)^1 * (112, 15) + C(2,2) * t^2 * (1-t)^0 * (96, 52)
 
 Expanded polynomial form (per coordinate):
   coord_0(t) = 32*t^2 + -96*t + 160
